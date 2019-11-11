@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AreaTriangulo</string>
+    <string name="base">Digite a base</string>
+    <string name="altura">Digite a altura</string>
+</resources>
