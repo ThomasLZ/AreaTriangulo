@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -34,8 +35,14 @@ public class MainActivity extends AppCompatActivity {
         String base = editTextBase.getText().toString().replace( ",", ".");
         String altura = editTextAltura.getText().toString().replace( ",", ".");
 
+
         Double baseResult = Double.parseDouble(base);
         Double alturaResult = Double.parseDouble(altura);
+
+        if (baseResult == 0 && alturaResult == 0){
+            Toast.makeText(MainActivity.this, "Os parâmetros passados no triângulos não existem!", Toast.LENGTH_SHORT).show();
+
+        }
 
         Calculo calc = new Calculo();
 
@@ -49,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         textViewResultado.setText(resultadoformatter);
         editTextBase.onEditorAction(EditorInfo.IME_ACTION_DONE);
         editTextAltura.onEditorAction(EditorInfo.IME_ACTION_DONE);
+
+
     }
 
 

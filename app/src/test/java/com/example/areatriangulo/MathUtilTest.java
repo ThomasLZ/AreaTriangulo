@@ -33,4 +33,9 @@ public class MathUtilTest {
     public void AlturaZero(){
         assertEquals(0, math.Area(2.0,0.0),0.1);
     }
+
+    @Test
+    public void NumDecimal(){
+        assertEquals(90.68, math.Area(12.75,14.225),0.1);
+    }
 }
